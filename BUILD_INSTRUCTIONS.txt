@@ -1,0 +1,61 @@
+
+
+
+Before running the build command, you need to update one line in the project file. Open DrawAssist.csproj in Notepad and change:
+
+<TargetFramework>net6.0-windows</TargetFramework>
+
+<TargetFramework>net10.0-windows</TargetFramework>
+
+
+
+
+
+
+
+
+====================================================
+  DrawAssist - Build Instructions
+====================================================
+
+STEP 1: Install .NET 6 SDK (free)
+----------------------------------
+1. Go to: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+2. Under ".NET 6.0 SDK", click the Windows x64 installer
+3. Run the installer, follow the prompts
+4. Restart your computer after installation
+
+STEP 2: Build DrawAssist
+--------------------------
+1. Extract this ZIP folder anywhere on your PC (e.g. Desktop)
+2. Open the folder called "DrawAssist"
+3. Hold Shift and right-click inside the folder
+4. Click "Open PowerShell window here" (or "Open command window here")
+5. Type the following command and press Enter:
+
+   dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
+
+6. Wait for it to finish (may take 1-2 minutes)
+7. Your EXE will be at:
+   DrawAssist\bin\Release\net6.0-windows\win-x64\publish\DrawAssist.exe
+
+STEP 3: Run DrawAssist
+------------------------
+1. Double-click DrawAssist.exe
+2. It will appear in your system tray (bottom-right, near the clock)
+3. Double-click the tray icon to open the control panel
+
+HOTKEYS (while Photoshop is open):
+  F9  = Toggle stroke smoothing on/off
+  F10 = Toggle perspective overlay on/off
+
+HOW TO MOVE VANISHING POINTS:
+  Hold Alt, then click and drag the glowing dots on the overlay
+
+NOTES:
+- The app auto-detects all Photoshop versions installed on your PC
+- You can choose to apply smoothing to all versions or specific ones
+- Settings and presets are saved automatically
+- The app must be running (in tray) for features to work
+
+====================================================
